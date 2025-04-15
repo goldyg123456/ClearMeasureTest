@@ -21,6 +21,7 @@ try
     {
         Console.WriteLine(line);
     }
+    Console.WriteLine();
     Console.WriteLine("Complete. Total lines for two names: " + output.Count);
     Console.ReadLine();
 }
