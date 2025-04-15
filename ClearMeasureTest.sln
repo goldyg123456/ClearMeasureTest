@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearMeasureTest", "ClearMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAndNameGenerator", "NumberAndNameGenerator\NumberAndNameGenerator.csproj", "{43D01826-D69E-45B9-94F2-55B664121E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAndNameGenerator.UnitTests", "TestProject1\NumberAndNameGenerator.UnitTests.csproj", "{D1D778A0-AC61-47F2-98EC-CA93F11B577B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAndNameGenerator.UnitTests", "NumberAndNameGenerator.UnitTests\NumberAndNameGenerator.UnitTests.csproj", "{817C60AD-BBC0-478A-BC5A-FCFE6EC5D8EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{43D01826-D69E-45B9-94F2-55B664121E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D01826-D69E-45B9-94F2-55B664121E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43D01826-D69E-45B9-94F2-55B664121E58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1D778A0-AC61-47F2-98EC-CA93F11B577B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1D778A0-AC61-47F2-98EC-CA93F11B577B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1D778A0-AC61-47F2-98EC-CA93F11B577B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1D778A0-AC61-47F2-98EC-CA93F11B577B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817C60AD-BBC0-478A-BC5A-FCFE6EC5D8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817C60AD-BBC0-478A-BC5A-FCFE6EC5D8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817C60AD-BBC0-478A-BC5A-FCFE6EC5D8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817C60AD-BBC0-478A-BC5A-FCFE6EC5D8EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
