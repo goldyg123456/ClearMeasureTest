@@ -9,7 +9,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsFullName_WhenDivisibleBy3and5()
         {
-            var result = NumberAndNameService.GetLines(15, 3, 5, [new("Greg", "Goldsmith")]);
+            var result = NumberAndNameService.Generate(15, 3, 5, [new("Greg", "Goldsmith")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsFullName_WhenDivisibleBy3and5.txt");
             Assert.Equal(expected, result);
@@ -19,7 +19,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsFirstName_WhenDivisibleBy3()
         {
-            var result = NumberAndNameService.GetLines(3, 3, 5, [new("Greg", "Goldsmith")]);
+            var result = NumberAndNameService.Generate(3, 3, 5, [new("Greg", "Goldsmith")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsFirstName_WhenDivisibleBy3.txt");
             Assert.Equal(expected, result);
@@ -29,7 +29,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsLastName_WhenDivisibleBy5()
         {
-            var result = NumberAndNameService.GetLines(5, 3, 5, [new("Greg", "Goldsmith")]);
+            var result = NumberAndNameService.Generate(5, 3, 5, [new("Greg", "Goldsmith")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsLastName_WhenDivisibleBy5.txt");
             Assert.Equal(expected, result);
@@ -39,7 +39,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsMultipleFullName_WhenDivisibleBy3and5()
         {
-            var result = NumberAndNameService.GetLines(15, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
+            var result = NumberAndNameService.Generate(15, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsMultipleFullName_WhenDivisibleBy3and5.txt");
             Assert.Equal(expected, result);
@@ -49,7 +49,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsMultipleFirstName_WhenDivisibleBy3()
         {
-            var result = NumberAndNameService.GetLines(3, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
+            var result = NumberAndNameService.Generate(3, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsMultipleFirstName_WhenDivisibleBy3.txt");
             Assert.Equal(expected, result);
@@ -59,7 +59,7 @@ namespace NumberAndNameGenerator.UnitTests
         [Fact]
         public void Service_PrintsMultipleLastName_WhenDivisibleBy5()
         {
-            var result = NumberAndNameService.GetLines(5, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
+            var result = NumberAndNameService.Generate(5, 3, 5, [new("Greg", "Goldsmith"), new("Tara", "Kohler")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsMultipleLastName_WhenDivisibleBy5.txt");
             Assert.Equal(expected, result);
@@ -70,7 +70,7 @@ namespace NumberAndNameGenerator.UnitTests
         public void Service_PrintsJustNumber_WhenNotDivisibleBy3or5()
         {
             var nameService = new NumberAndNameService();
-            var result = NumberAndNameService.GetLines(2, 3, 5, [new("Greg", "Goldsmith")]);
+            var result = NumberAndNameService.Generate(2, 3, 5, [new("Greg", "Goldsmith")]);
             var x = JsonConvert.SerializeObject(result);
             var expected = GetExpected("Service_PrintsJustNumber_WhenNotDivisibleBy3or5.txt");
             Assert.Equal(expected, result);
@@ -87,7 +87,7 @@ namespace NumberAndNameGenerator.UnitTests
 
             // Act & Assert
             Assert.Throws<ArgumentException>(() =>
-                NumberAndNameService.GetLines(15, invalidDivisor1, invalidDivisor2, names));
+                NumberAndNameService.Generate(15, invalidDivisor1, invalidDivisor2, names));
         }
 
         [Fact]
@@ -100,7 +100,7 @@ namespace NumberAndNameGenerator.UnitTests
 
             // Act & Assert
             Assert.Throws<ArgumentException>(() =>
-                NumberAndNameService.GetLines(15, invalidDivisor1, invalidDivisor2, names));
+                NumberAndNameService.Generate(15, invalidDivisor1, invalidDivisor2, names));
         }
 
         [Fact]
@@ -113,7 +113,7 @@ namespace NumberAndNameGenerator.UnitTests
 
             // Act & Assert
             Assert.Throws<ArgumentException>(() =>
-                NumberAndNameService.GetLines(15, invalidDivisor1, invalidDivisor2, names));
+                NumberAndNameService.Generate(15, invalidDivisor1, invalidDivisor2, names));
         }
 
         private static List<string>? GetExpected(string fileName)

@@ -19,7 +19,7 @@ namespace NumberAndNameGenerator
         /// <exception cref="ArgumentException">An exception will be thrown if the namesToPrint parameter is null or empty. You must supply at least one name to print.</exception>
         /// <exception cref="ArgumentException">An exception will be thrown if the firstNameDivisor and lastNameDivisor are equal to each other. These values must be different.</exception>
         /// <exception cref="ArgumentException"></exception>
-        public static List<string> GetLines(int iterations, int firstNameDivisor, int lastNameDivisor, List<Name> namesToPrint)
+        public static List<string> Generate(int iterations, int firstNameDivisor, int lastNameDivisor, List<Name> namesToPrint)
         {
             if (iterations <= 0 || firstNameDivisor <= 0 || lastNameDivisor <= 0)
             {
