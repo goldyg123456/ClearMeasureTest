@@ -45,7 +45,7 @@ namespace NumberAndNameGenerator
 
             for (int i = 1; i <= iterations; i++)
             {
-                string line = string.Empty;
+                string? line;
 
                 if (i % firstNameDivisor == 0 && i % lastNameDivisor == 0)
                 {
@@ -73,6 +73,7 @@ namespace NumberAndNameGenerator
         private static string GetLineValue(List<Name> namesToPrint, LineType lineType)
         {
             string line = string.Empty;
+
             for (int i = 0; i < namesToPrint.Count; i++)
             {
                 var name = namesToPrint[i];
